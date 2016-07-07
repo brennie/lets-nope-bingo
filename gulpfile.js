@@ -41,7 +41,6 @@ gulp.task('build:html', function() {
     .pipe(gulp.dest('./build'));
 
   if (browserSync.active) {
-    console.log('reloading');
     browserSync.reload();
   }
 
