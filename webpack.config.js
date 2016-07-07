@@ -1,6 +1,5 @@
 'use strict';
 
-var glob = require('glob');
 var path = require('path');
 var webpack = require('webpack');
 
@@ -8,13 +7,14 @@ var webpack = require('webpack');
 module.exports = {
   cache: true,
   devtool: 'source-map',
-  entry: {
-    letsNope: glob.sync('./src/js/**/*.js?(x)')
-  },
+  entry: [
+    'babel-polyfill',
+    './src/js/app.jsx'
+  ],
   output: {
     path: path.join(__dirname, 'build', 'js'),
     publicPath: 'build/',
-    filename: '[name].min.js',
+    filename: 'bingo.min.js',
     chunkFilename: '[chunkHash].js',
     sourceMapFilename: '[file].map'
   },
