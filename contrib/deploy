@@ -1,0 +1,21 @@
+#!/bin/bash
+# Deploy the build/ directory to the gh-pages branch.
+HEAD=$(git rev-parse HEAD)
+
+gulp clean
+gulp build --production
+
+git branch -D gh-pages
+git checkout --orphan gh-pages
+git rm --cached -r .
+
+mv build/* .
+
+git add index.html
+git add css/
+git add js/
+
+git commit -m "Deploy ${HEAD}"
+git push -fu origin gh-pages
+
+git checkout -f master
