@@ -15,12 +15,15 @@ var yargs = require('yargs');
 var webpackConfig = require('./webpack.config');
 
 if (yargs.argv.production) {
-  webpackConfig.plugins.unshift(
+  webpackConfig.plugins = [
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production')
       }
-    }));
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin()
+  ];
 }
 
 /*
