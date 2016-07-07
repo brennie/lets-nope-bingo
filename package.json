@@ -1,0 +1,15 @@
+{
+  "name": "lets-nope-bingo",
+  "version": "0.0.1",
+  "description": "An interactive bingo card for the Let's Nope.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brennie/lets-nope-bingo.git"
+  },
+  "author": "Barret Rennie <barret@brennie.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brennie/lets-nope-bingo/issues"
+  },
+  "homepage": "https://github.com/brennie/lets-nope-bingo#readme"
+}
