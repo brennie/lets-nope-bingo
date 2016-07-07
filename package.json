@@ -13,9 +13,9 @@
   },
   "homepage": "https://github.com/brennie/lets-nope-bingo#readme",
   "dependencies": {
+    "immutable": "^3.8.1",
     "normalize.css": "^4.2.0",
-    "react": "^15.2.0",
-    "redux": "^3.5.2"
+    "react": "^15.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
