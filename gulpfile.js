@@ -88,7 +88,7 @@ gulp.task('build:css', function() {
       require('autoprefixer')({ browsers: ['last 2 versions'] }),
       require('cssnano')
     ]))
-    .pipe(gulpConcat('letsNope.min.css'))
+    .pipe(gulpConcat('style.min.css'))
     .pipe(gulpSourcemaps.write());
 
   if (browserSync.active) {
