@@ -1,3 +1,56 @@
 body {
   background-color: #eee;
 }
+
+
+.content {
+  margin: 0 auto;
+  min-width: 50em;
+}
+
+.content__heading {
+  text-align: center;
+}
+
+
+.bingo-card {
+  align-content: space-between;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 55em;
+  height: 55em;
+}
+
+
+.bingo-card__cell {
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  text-align: center;
+  width: 10em;
+  height: 10em;
+}
+
+
+.bingo-card__cell--active {
+  background-color: #aaa;
+}
+
+
+footer {
+  color: #aaa;
+  font-size: 10pt;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+
+a {
+  color: #aaa;
+}
