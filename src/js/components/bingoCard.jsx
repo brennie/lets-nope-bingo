@@ -51,13 +51,11 @@ export default class BingoCard extends React.Component {
             tropeText={ tropeText }
             active={ this.state.data.getIn(['active', j, i]) }
             key={ key }
-            onClick={ () => 
-              this.setState(
-                ({data}) => ({
-                    data: data.updateIn(['active', j, i], value => !value)
+            onClick={ () => this.setState(
+              ({data}) => ({
+                  data: data.updateIn(['active', j, i], value => !value)
                 })
-              )
-            } />
+            ) } />
         );
       }
     }
@@ -66,6 +64,25 @@ export default class BingoCard extends React.Component {
       <div>
         <h1 className="content__heading">Let's Nope! Bingo</h1>
         <div className="bingo-card">{cells}</div>
+        <div className="bingo-card__controls">
+          <button
+            className="btn bingo-card__controls__btn"
+            onClick={ () => this.setState(
+              ({data}) => ({
+                data: data.set('active', this._reset())
+              })
+            ) }>Reset</button>
+          <button
+            className="btn bingo-card__controls__btn"
+            onClick={() => this.setState(
+              ({data}) => ({
+                data: Immutable.Map({
+                  tropes: this._generate(),
+                  active: this._reset()
+                })
+              })
+            ) }>Generate New Card</button>
+        </div>
       </div>
     );
   }

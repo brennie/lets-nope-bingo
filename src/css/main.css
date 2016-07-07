@@ -26,6 +26,7 @@ body {
 
 .bingo-card__cell {
   align-items: center;
+  background-color: #fff;
   border: 1px solid black;
   cursor: pointer;
   display: flex;
@@ -38,8 +39,26 @@ body {
 
 
 .bingo-card__cell--active {
-  background-color: #aaa;
+  background-color: #ccc;
 }
+
+
+.bingo-card__controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+
+.bingo-card__controls__btn {
+  background-color: white;
+  font-size: 10pt;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin: 0 1em;
+}
+
 
 
 footer {
@@ -53,4 +72,10 @@ footer {
 
 a {
   color: #aaa;
+}
+
+
+.btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
 }

@@ -32,7 +32,7 @@ export default class BingoCell extends React.Component {
    */
   render() {
     const activeClass = this.props.active ? ' bingo-card__cell--active' : '';
-    const classes = `bingo-card__cell${activeClass}`;
+    const classes = `bingo-card__cell btn${activeClass}`;
 
     return (
       <div className={classes} ref={ (el) => this._el = el }>
