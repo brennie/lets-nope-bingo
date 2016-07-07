@@ -8,24 +8,6 @@ import React from 'react';
  */
 export default class BingoCell extends React.Component {
   /**
-   * Handle the compnent mounting.
-   *
-   * This will handle binding the on click handler to the DOM element.
-   */
-  componentDidMount() {
-    this._el.addEventListener('click', this.props.onClick);
-  }
-
-  /**
-   * Handle the component unmounting.
-   *
-   * This will handle unbinding the click handler from the DOM element.
-   */
-  componentWillUnmount() {
-    this._el.removeEventListener('click', this.props.onClick);
-  }
-
-  /**
    * Render the bingo cell.
    *
    * @returns {React.ReactElement} The rendered component.
@@ -35,9 +17,12 @@ export default class BingoCell extends React.Component {
     const classes = `bingo-card__cell btn${activeClass}`;
 
     return (
-      <div className={classes} ref={ (el) => this._el = el }>
-        {this.props.tropeText}
-      </div>
+      <button
+        className={classes}
+        ref={ (el) => this._el = el }
+        onClick={this.props.onClick}>
+          {this.props.tropeText}
+      </button>
     );
   }
 };
