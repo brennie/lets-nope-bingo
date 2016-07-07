@@ -20,7 +20,7 @@ Building
 To build `lets-nope-bingo`, run:
 
 ```
-$ gulp build
+$ gulp build --production
 ```
 
 The app will be built into the `build/` directory.

@@ -9,8 +9,19 @@ var gulpPostcss = require('gulp-postcss');
 var gulpSourcemaps = require('gulp-sourcemaps');
 var gulpUtil = require('gulp-util');
 var webpack = require('webpack');
+var yargs = require('yargs');
+
 
 var webpackConfig = require('./webpack.config');
+
+if (yargs.argv.production) {
+  webpackConfig.plugins.unshift(
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }));
+}
 
 /*
  * The default task is to start the development server.
