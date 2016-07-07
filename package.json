@@ -12,6 +12,9 @@
     "url": "https://github.com/brennie/lets-nope-bingo/issues"
   },
   "homepage": "https://github.com/brennie/lets-nope-bingo#readme",
+  "scripts": {
+    "lint": "eslint src/js/"
+  },
   "dependencies": {
     "immutable": "^3.8.1",
     "normalize.css": "^4.2.0",
@@ -27,6 +30,8 @@
     "browser-sync": "^2.13.0",
     "cssnano": "^3.7.1",
     "del": "^2.2.1",
+    "eslint": "^3.0.1",
+    "eslint-plugin-react": "^5.2.2",
     "glob": "^7.0.5",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
