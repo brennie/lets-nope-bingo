@@ -25,4 +25,4 @@ export default class BingoCell extends React.Component {
       </button>
     );
   }
-};
+}

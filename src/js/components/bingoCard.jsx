@@ -53,8 +53,8 @@ export default class BingoCard extends React.Component {
             key={ key }
             onClick={ () => this.setState(
               ({data}) => ({
-                  data: data.updateIn(['active', j, i], value => !value)
-                })
+                data: data.updateIn(['active', j, i], value => !value)
+              })
             ) } />
         );
       }
@@ -74,14 +74,12 @@ export default class BingoCard extends React.Component {
             ) }>Reset</button>
           <button
             className="btn bingo-card__controls__btn"
-            onClick={() => this.setState(
-              ({data}) => ({
-                data: Immutable.Map({
-                  tropes: this._generate(),
-                  active: this._reset()
-                })
+            onClick={() => this.setState({
+              data: Immutable.Map({
+                tropes: this._generate(),
+                active: this._reset()
               })
-            ) }>Generate New Card</button>
+            }) }>Generate New Card</button>
         </div>
       </div>
     );
@@ -128,7 +126,7 @@ export default class BingoCard extends React.Component {
       [false, false, false, false, false],
       [false, false, false, false, false],
       [false, false, false, false, false],
-      [false, false, false, false, false]
+      [false, false, false, false, false],
     ]);
   }
-};
+}
